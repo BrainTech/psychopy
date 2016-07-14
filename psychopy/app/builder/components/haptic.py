@@ -21,7 +21,7 @@ class HapticComponent(BaseComponent):
             "stopVal": Param(stopVal, allowedVals = [1], valType= "code", allowedTypes = [], updates = 'constant', allowedUpdates = [], hint = "One-shot"),
             "startEstim": Param(startEstim, valType = 'code', allowedTypes = [], hint = "(Optional) expected start (s), purely for representing in the timeline"),
             "durationEstim": Param(durationEstim, valType = "code", allowedVals = [0.02], allowedTypes = [], hint = "One-shot"),
-            "channel": Param('1', valType="code", allowedTypes=[], hint="Index of active channel for haptic stimulator", label="haptic channel"),
+            "channel": Param('1', valType="code", allowedTypes=[], updates='set every repeat', hint="Index of active channel for haptic stimulator", label="haptic channel"),
         }
         self.order = ["channel"]
 
